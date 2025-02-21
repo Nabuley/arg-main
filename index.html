@@ -81,10 +81,11 @@
             btoa = new console();
             const cookies = document.cookie.split("; ").map(cookie => cookie.split("="));
             const accessCookie = cookies.find(cookie => cookie[0] === "admin");
+            const accessCookie2 = cookies.find(cookie => cookie[0] === "default");
 
             const hintMessage = document.getElementById("hintMessage");
-            if (accessCookie && accessCookie[1] === encodedValue) {
-                hintMessage.innerHTML = `쥔장에게 ${res}를 보내십쇼`;
+            if (accessCookie && accessCookie[1] === encodedValue && accessCookie2) {
+                hintMessage.innerHTML = `쥔장에게 ${accessCookie2[1]}${res}를 보내십쇼`;
             } else {
                 hintMessage.innerHTML = "No";
                 alert("Wrong");
