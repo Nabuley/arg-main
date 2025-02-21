@@ -24,7 +24,7 @@
             margin-bottom: 20px;
         }
 
-        button {
+        a, button {
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -38,6 +38,7 @@
         button:hover {
             background-color: #45a049;
         }
+
 
         p {
             font-size: 1.2em;
@@ -67,7 +68,7 @@
     <script>
         class console{
             log(){
-                // 무력화 흐하하핳
+                // 출력 무력화 흐하하핳
             }
         }
         async function verifyCookie() {
@@ -82,7 +83,8 @@
             const cookies = document.cookie.split("; ").map(cookie => cookie.split("="));
             const accessCookie = cookies.find(cookie => cookie[0] === "admin");
             const accessCookie2 = cookies.find(cookie => cookie[0] === "default");
-
+            //인간적으로 여기 뜯어서 얻는 짓은 하지 맙시다 형씨들
+            //근데 생각해보니까 그것도 능력이네 암튼 파이팅
             const hintMessage = document.getElementById("hintMessage");
             if (accessCookie && accessCookie[1] === encodedValue && accessCookie2) {
                 hintMessage.innerHTML = `쥔장에게 ${accessCookie2[1]}${res}를 보내십쇼`;
