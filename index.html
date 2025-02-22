@@ -87,7 +87,7 @@
             //근데 생각해보니까 그것도 능력이네 암튼 파이팅
             const hintMessage = document.getElementById("hintMessage");
             if (accessCookie && accessCookie[1] === encodedValue && accessCookie2) {
-                hintMessage.innerHTML = `goto ${accessCookie2[1]}${res}`;
+                hintMessage.innerHTML = `goto ${accessCookie2[1]}${res.slice(0, -2)}`;
             } else {
                 hintMessage.innerHTML = "No";
                 alert("Wrong");
